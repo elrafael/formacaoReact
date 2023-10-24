@@ -1,6 +1,6 @@
 import { FC, useState, ChangeEvent } from "react";
 import { CommentInputTypes } from "./CommentInput.types";
-import './index.css'
+import styles from './index.module.css'
 
 export const CommentInput: FC<CommentInputTypes> = ({ input }) => {
   const [inp, setInp] = useState<string>(input ? input.toString() : "");
