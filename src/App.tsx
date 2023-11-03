@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from 'styled-components'
 import './App.scss'
-import { Card } from './components/card'
+// import { Card } from './components/card'
+import { Post } from './components/post'
 
-import { FooterActions } from './components/footer/FooterActions.tsx'
+// import { FooterActions } from './components/footer/FooterActions.tsx'
 
 import axios from "axios";
 
@@ -62,13 +63,19 @@ function App() {
     // <ThemeProvider theme={ newTheme ? darkTheme : defaultTheme}>
     <ThemeProvider theme={ theme }>
 
-      {list.map((tweet, index) => (
+      {/* {list.map((tweet, index) => (
         <Card tweet={tweet} key={index} />
+      ))} */}
+
+      {list.map((post, index) => (
+        <Post post={post} key={index} />
       ))}
+
+      
 
       <button onClick={newTweet}>new tweet</button>
 
-      <FooterActions />
+      {/* <FooterActions /> */}
 
     </ThemeProvider>
   )
