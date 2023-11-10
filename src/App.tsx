@@ -1,19 +1,14 @@
-import { useState } from 'react'
 import './App.scss'
-import { Card } from './components/card'
-
-import { FooterActions } from './components/footer/FooterActions.tsx'
+import { Route, Routes } from 'react-router-dom'
+import { Feed } from './pages/Feed/index.tsx'
+import { Explorer } from './pages/Explorer/index.tsx'
 
 function App() {
-  // const [count, setCount] = useState(0)
-
-
   return (
-    <>
-      <Card />
-
-      <FooterActions />
-    </>
+    <Routes>
+      <Route index path='/' element={<Explorer />} />
+      <Route index path='/feed' element={<Feed />} />
+    </Routes>
   )
 }
 
